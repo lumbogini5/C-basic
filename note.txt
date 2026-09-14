@@ -1,0 +1,6 @@
+git lfs track "*.mp4"
+git lfs track
+git add .gitattributes
+git add "*.mp4"
+git commit -m "Add video files using Git LFS"
+git push origin main
