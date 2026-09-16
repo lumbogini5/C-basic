@@ -7,7 +7,22 @@ git push origin main
 
 
 xóa file khỏi git lfs
-git filter-repo --force --path "C++/main/Buoi01.mp4" --invert-paths (file muốn xóa )
-git log --all -- "C++/main/Buoi01.mp4"(file cần ktra) (kiểm tra file đó còn không)
+git filter-repo --force --path "C++/main/Buoi01.mp4" --invert-paths	 (file muốn xóa đứng ở file .gitattributes )
+git log --all -- "C++/main/Buoi01.mp4"  	(file cần ktra) (kiểm tra file đó còn không)
 git remote add origin https://github.com/lumbogini5/C-basic.git 
 git push origin main --force
+
+
+check dung lượng
+git lfs ls-files --size
+du -sh .git/lfs/objects
+
+git lfs count
+git lfs status
+
+xem các object đã xóa và chưa xóa
+git lfs prune --dry-run
+
+giải phóng các object cũ 
+git lfs prune
+git lfs prune --dry-run
